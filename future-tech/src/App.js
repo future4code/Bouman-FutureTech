@@ -21,12 +21,7 @@ class App extends React.Component{
   render(){
     return(
       <div>
-       
-          <FormularioContainer />
           <HomePage />
-
-        <FormularioContainer />
-
       </div>
     )
   }

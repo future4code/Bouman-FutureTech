@@ -63,31 +63,33 @@ padding-top:30px;
 font-weight:bold;
 `
 
-const Input = styled.input`
-
-`
-
 class FormularioContainer extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-
+      titulo: "",
+      imagem: "",
+      descricao: "",
+      valor: "",
+      metodoPagamento: ""
     }
   }
 
   render(){
+
     return(
+
       <div>
           <Titulo>Cadastro de Produtos</Titulo>
           <ContainerForm>
             <ContainerLabels>
               <Label>Título Produto:</Label>
-              <Input type="text"></Input>
+              <Input type="text"/>
             </ContainerLabels>
 
             <ContainerLabels>
               <Label>Imagem Produto:</Label>
-              <Input type="text"></Input>
+              <Input type="text"/>
             </ContainerLabels>
 
             <ContainerLabels>
@@ -97,62 +99,24 @@ class FormularioContainer extends React.Component{
            
             <ContainerLabels>
               <Label>Valor Produto:</Label>
-              <Input type="number"></Input>
+              <Input type="text"/>
             </ContainerLabels>
 
             <ContainerLabels>
               <Label>Método de Pagamento:</Label>
-              <Input type="text"></Input>
+              <Input type="text"/>
             </ContainerLabels>
             
             <ContainerLabels>
               <Label>Método de Pagamento:</Label>
-              <Input type="text"></Input>
+              <Input type="text"/>
             </ContainerLabels>
             
             <ContainerLabels>
               <Label>Prazo de Entrega:</Label>
-              <Input type="text"></Input>
+              <Input type="text"/>
             </ContainerLabels>
             <Botao>Cadastrar Produto</Botao>
-
-            <div>
-              <Label>Título Produto</Label>
-              <Input type="text"></Input>
-            </div>
-
-            <div>
-              <Label>Imagem Produto</Label>
-              <Input type="text"></Input>
-            </div>
-
-            <div>
-              <Label>Descrição Produto</Label>
-              <Input type="text"></Input>
-            </div>
-           
-            <div>
-              <Label>Valor Produto</Label>
-              <Input type="text"></Input>
-            </div>
-
-            <div>
-              <Label>Método de Pagamento</Label>
-              <Input type="text"></Input>
-            </div>
-            
-            <div>
-              <Label>Método de Pagamento</Label>
-              <Input type="text"></Input>
-            </div>
-            
-            <div>
-              <Label>Prazo de Entrega</Label>
-              <Input type="text"></Input>
-            </div>
-
-
-            
           </ContainerForm>
       </div>
     )
