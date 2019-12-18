@@ -23,7 +23,6 @@ color:white;
 margin-block-start: 0px;
 margin-block-end: 0px;
 margin-right:40px;
-
 `
 
 
@@ -59,7 +58,11 @@ function HomePageFooter (){
                 <TituloRedeSociais>(11)97455-8878</TituloRedeSociais>
             </RedeSociais>
             <Copy>©copyright FutureTech 2019-today</Copy>
-      </ContainerFooter>
+
+        </ContainerFooter>
+
+
+
 
         </div>
     )
