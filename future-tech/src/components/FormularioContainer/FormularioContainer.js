@@ -10,12 +10,15 @@ text-align:center;
 const ContainerForm = styled.div `
 width: 500px;
 height: 480px;
+height: 400px;
 border-radius:10px;
 background-color:#C76103;
 margin:auto;
 display:flex;
 flex-direction:column;
+
 margin-bottom:30px;
+
 
 `
 const Label = styled.label`
@@ -55,6 +58,13 @@ border: solid 2px black;
 margin:auto;
 border-radius: 10px;
 font-weight:bold;
+padding-left:50px;
+padding-top:30px;
+font-weight:bold;
+`
+
+const Input = styled.input`
+
 `
 
 class FormularioContainer extends React.Component{
@@ -105,6 +115,43 @@ class FormularioContainer extends React.Component{
               <Input type="text"></Input>
             </ContainerLabels>
             <Botao>Cadastrar Produto</Botao>
+
+            <div>
+              <Label>Título Produto</Label>
+              <Input type="text"></Input>
+            </div>
+
+            <div>
+              <Label>Imagem Produto</Label>
+              <Input type="text"></Input>
+            </div>
+
+            <div>
+              <Label>Descrição Produto</Label>
+              <Input type="text"></Input>
+            </div>
+           
+            <div>
+              <Label>Valor Produto</Label>
+              <Input type="text"></Input>
+            </div>
+
+            <div>
+              <Label>Método de Pagamento</Label>
+              <Input type="text"></Input>
+            </div>
+            
+            <div>
+              <Label>Método de Pagamento</Label>
+              <Input type="text"></Input>
+            </div>
+            
+            <div>
+              <Label>Prazo de Entrega</Label>
+              <Input type="text"></Input>
+            </div>
+
+
             
           </ContainerForm>
       </div>

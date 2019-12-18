@@ -30,6 +30,7 @@ const RedeSociais = Styled.div`
 display:flex;
 justify-content:center;
 margin-left:40px;
+
 `
 
 const ImgRedesSociais = Styled.img`
@@ -37,6 +38,7 @@ width:20px;
 height:20px;
 margin-right:9px;
 margin-left:10px;
+
 `
 
 const Copy = Styled.p`
@@ -56,7 +58,11 @@ function HomePageFooter (){
                 <TituloRedeSociais>(11)97455-8878</TituloRedeSociais>
             </RedeSociais>
             <Copy>©copyright FutureTech 2019-today</Copy>
+
         </ContainerFooter>
+
+
+
 
         </div>
     )
