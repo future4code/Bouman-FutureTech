@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { withStyles } from '@material-ui/core/styles';
 import Background from '../img/Background.jpg'
-import FormularioContainer from '../FormularioContainer/FormularioContainer'
-import HomePage from './HomePage';
 
 const MainContainer = styled.div `
     height: 600px;
@@ -111,7 +109,6 @@ class HomePageMain extends React.Component {
                             Estamos nesse mercado de venda a mais de 20 anos buscando trazer o melhor preço e experiência para nossos clientes.
                         </P2>
                         <ButtonsContainer>
-                            {/* {this.state.window === "Home" ? <HomePage/> : <FormularioContainer/>} */}
                             <Button onClick = {this.onClickSwitchWindowLoja}>{buttonTextLoja}</Button>
                             <Button onClick = {this.onClickSwitchWindowCadastro}>{buttonTextCadastro}</Button>
                         </ButtonsContainer>
