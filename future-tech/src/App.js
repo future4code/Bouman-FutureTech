@@ -21,7 +21,12 @@ class App extends React.Component{
   render(){
     return(
       <div>
+        {/* <HomePage></HomePage> */}
+        <CardDeProduto size="small">
 
+
+
+        </CardDeProduto>
       </div>
     )
   }
