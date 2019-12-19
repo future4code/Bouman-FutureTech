@@ -58,16 +58,19 @@ font-weight:bold;
 padding:10px;
 font-weight:bold;
 `
+
 class FormularioContainer extends React.Component{
   constructor(props){
     super(props)
     this.state = {
+
           titulo:"",
           imagem:"",
           descricao:"",
           valor:"",
           pagamento:"",
           entrega:""
+
     }
   }
 
@@ -96,18 +99,24 @@ class FormularioContainer extends React.Component{
   }
 
   render(){
+
     return(
+
       <div>
           <Titulo>Cadastro de Produtos</Titulo>
           <ContainerForm>
             <ContainerLabels>
               <Label>Título Produto:</Label>
+
               <Input type="text" value={this.state.titulo} onChange={this.onChangeTitulo}></Input>
+
             </ContainerLabels>
 
             <ContainerLabels>
               <Label>Imagem Produto:</Label>
+
               <Input type="text" value={this.state.imagem} onChange={this.onChangeImagem}></Input>
+
             </ContainerLabels>
 
             <ContainerLabels>
@@ -117,7 +126,9 @@ class FormularioContainer extends React.Component{
            
             <ContainerLabels>
               <Label>Valor Produto:</Label>
+
               <Input type="number" value={this.state.valor} onChange={this.onChangeValor}></Input>
+
             </ContainerLabels>
 
             <ContainerLabels>
@@ -125,12 +136,14 @@ class FormularioContainer extends React.Component{
               <Input type="text" value={this.state.pagamento} onChange={this.onChangePagamento}></Input>
             </ContainerLabels>
             
+            
             <ContainerLabels>
               <Label>Prazo de Entrega:</Label>
               <Input type="text" value={this.state.entrega} onChange={this.onChangeEntrega}></Input>
             </ContainerLabels>
-            <Botao>Cadastrar Produto</Botao>
             
+            <Botao>Cadastrar Produto</Botao>
+       
           </ContainerForm>
       </div>
     )

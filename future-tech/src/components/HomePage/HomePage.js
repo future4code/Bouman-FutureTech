@@ -11,7 +11,6 @@ function HomePage (){
             <HomePageHeader/>
             <HomePageMain/>
             <HomePageFooter/>
-
         </div>
     )
 
