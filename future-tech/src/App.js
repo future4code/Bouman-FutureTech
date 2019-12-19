@@ -2,10 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { withStyles } from '@material-ui/core/styles';
 import HomePage from './components/HomePage/HomePage';
-import Footer from './components/Footer/Footer'
-import LogoMarca from './components/img/LogoMarca.png';
-import FormularioContainer from './components/FormularioContainer/FormularioContainer'
-import ProdutoContainer from './components/ProdutosContainer/ProdutoContainer'
 
 // Estilização
 
@@ -100,21 +96,6 @@ class App extends React.Component{
     const isCadastroSelected = this.state.window === "Home" || "Cadastro" && this.state.window ==! "Loja";
 
     let window;
-
-    if (this.state.window === "Home") {
-      window = (
-        <HomePage/>
-      )
-    } else if (this.state.window === "Cadastro") {
-      window = (
-        <FormularioContainer/>
-      )
-    } else if (this.state.window === "Loja") {
-      window = (
-        <ProdutoContainer/>
-      )
-    }
-
     
     return(
       <div>     
