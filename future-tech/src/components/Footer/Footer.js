@@ -13,11 +13,6 @@ margin:auto;
 text-align:center;
 `
 
-const Contatos = Styled.h2`
-color:white;
-padding-top:10px;
-`
-
 const TituloRedeSociais = Styled.h4`
 color:white;
 margin-block-start: 0px;
@@ -46,9 +41,8 @@ font-size:10px;
 margin-top:20px;
 `
 
-function HomePageFooter (){
+function Footer (){
     return (
-        <div>
         <ContainerFooter>
             <h3>Contatos</h3>
             <RedeSociais>
@@ -58,15 +52,9 @@ function HomePageFooter (){
                 <TituloRedeSociais>(11)97455-8878</TituloRedeSociais>
             </RedeSociais>
             <Copy>©copyright FutureTech 2019-today</Copy>
-
         </ContainerFooter>
-
-
-
-
-        </div>
     )
 
 }
 
-export default HomePageFooter;
+export default Footer;
