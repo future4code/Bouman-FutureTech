@@ -6,6 +6,7 @@ import ProdutosContainer from './components/ProdutosContainer/ProdutoContainer';
 import CarrinhoContainer from './components/CarrinhoContainer/CarrinhoContainer';
 import FormularioContainer from './components/FormularioContainer/FormularioContainer';
 import HomePage from './components/HomePage/HomePage';
+import Filtros from './components/Filtros/index'
 
 
 
@@ -23,7 +24,8 @@ class App extends React.Component{
       <div>
 
        
-          <FormularioContainer />
+          {/* <FormularioContainer /> */}
+          <Filtros />
 
  
       </div>
