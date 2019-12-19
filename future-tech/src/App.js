@@ -23,10 +23,6 @@ class App extends React.Component{
       <div>
        
           <FormularioContainer />
-          <HomePage />
-
-        <FormularioContainer />
-
       </div>
     )
   }
