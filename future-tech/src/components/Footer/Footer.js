@@ -5,17 +5,12 @@ import { withStyles } from '@material-ui/core/styles';
 
 const ContainerFooter = Styled.div`
 width:100%;
-height: 130px;
+height: 30vh;
 background-color:black;
 color: white;
 padding-top:0.5px;
 margin:auto;
 text-align:center;
-`
-
-const Contatos = Styled.h2`
-color:white;
-padding-top:10px;
 `
 
 const TituloRedeSociais = Styled.h4`
@@ -43,12 +38,11 @@ margin-left:10px;
 
 const Copy = Styled.p`
 font-size:10px;
-margin-top:20px;
+margin-top:70px;
 `
 
-function HomePageFooter (){
+function Footer (){
     return (
-        <div>
         <ContainerFooter>
             <h3>Contatos</h3>
             <RedeSociais>
@@ -58,15 +52,8 @@ function HomePageFooter (){
                 <TituloRedeSociais>(11)97455-8878</TituloRedeSociais>
             </RedeSociais>
             <Copy>©copyright FutureTech 2019-today</Copy>
-
-        </ContainerFooter>
-
-
-
-
-        </div>
+        </ContainerFooter>  
     )
-
 }
 
-export default HomePageFooter;
+export default Footer;

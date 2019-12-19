@@ -8,59 +8,59 @@ text-align:center;
 `
 
 const ContainerForm = styled.div `
-width: 500px;
-height: 480px;
-height: 400px;
-border-radius:10px;
-background-color:#C76103;
-margin:auto;
-display:flex;
-flex-direction:column;
-
-margin-bottom:30px;
-
-
-`
-const Label = styled.label`
-color:black;
-padding-left:80px;
-padding-top:30px;
-font-weight:bold;
-margin-right:10px;
+  width: 95vw;
+  height: 100vh;
+  max-width: 500px;
+  max-height: 540px;
+  border-radius:10px;
+  background-color:#C76103;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom:30px; 
 
 `
+
 const ContainerLabels = styled.div`
-margin-top:20px;
-margin-bottom:5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 `
 
 const Input = styled.input`
-border:none;
-border-radius:5px;
-width:200px;
-height: 18px;
+  border:none;
+  border-radius:5px;
+  width:200px;
+  height: 18px;
 `
 
-const InputDescricao = styled.input`
-border:none;
-border-radius:5px;
-width:200px;
-height: 60px;
+const InputDescricao = styled.textarea`
+  border:none;
+  border-radius:5px;
+  width:200px;
+  height: 60px;
 `
 
 const Botao = styled.button`
-border:none;
-background-color:white;
-color:#C76103;
-padding: 10px;
-width:auto;
-border: solid 2px black;
-margin:auto;
-border-radius: 10px;
-font-weight:bold;
-padding-left:50px;
-padding-top:30px;
-font-weight:bold;
+  background-color:white;
+  color:#C76103;
+  width:auto;
+  height: 30px;
+  margin:auto;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-weight: bold;
+  :hover {
+    cursor: pointer;
+    color: white;
+    background-color: gray;
+  }
 `
 
 class FormularioContainer extends React.Component{
@@ -83,37 +83,37 @@ class FormularioContainer extends React.Component{
           <Titulo>Cadastro de Produtos</Titulo>
           <ContainerForm>
             <ContainerLabels>
-              <Label>Título Produto:</Label>
+              <h4>Título</h4>
               <Input type="text"/>
             </ContainerLabels>
 
             <ContainerLabels>
-              <Label>Imagem Produto:</Label>
+              <h4>Imagem Produto:</h4>
               <Input type="text"/>
             </ContainerLabels>
 
             <ContainerLabels>
-              <Label>Descrição Produto:</Label>
+              <h4>Descrição Produto:</h4>
               <InputDescricao type="textarea"></InputDescricao>
             </ContainerLabels>
            
             <ContainerLabels>
-              <Label>Valor Produto:</Label>
+              <h4>Valor Produto:</h4>
               <Input type="text"/>
             </ContainerLabels>
 
             <ContainerLabels>
-              <Label>Método de Pagamento:</Label>
+              <h4>Método de Pagamento:</h4>
               <Input type="text"/>
             </ContainerLabels>
             
             <ContainerLabels>
-              <Label>Método de Pagamento:</Label>
+              <h4>Método de Pagamento:</h4>
               <Input type="text"/>
             </ContainerLabels>
             
             <ContainerLabels>
-              <Label>Prazo de Entrega:</Label>
+              <h4>Prazo de Entrega:</h4>
               <Input type="text"/>
             </ContainerLabels>
             <Botao>Cadastrar Produto</Botao>
