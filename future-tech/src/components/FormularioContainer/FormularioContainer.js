@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { withStyles } from '@material-ui/core/styles';
+import axios from 'axios';
 
 
 const Titulo = styled.h1`
@@ -64,13 +65,14 @@ const Botao = styled.button`
   }
 `
 
+const baseURL = "https://us-central1-future-apis.cloudfunctions.net/futureTech";
+
 class FormularioContainer extends React.Component{
   constructor(props){
     super(props)
     this.state = {
 
           titulo:"",
-          imagem:"",
           descricao:"",
           valor:"",
           pagamento:"",
@@ -83,9 +85,7 @@ class FormularioContainer extends React.Component{
     this.setState({titulo: e.target.value})
   }
 
-  onChangeImagem = (e) =>{
-    this.setState({imagem: e.target.value})
-  }
+ 
 
   onChangeDescricao =(e) =>{
     this.setState({descricao: e.target.value})
@@ -101,6 +101,25 @@ class FormularioContainer extends React.Component{
 
   onChangeEntrega = (e) =>{
     this.setState({entrega: e.target.value})
+  }
+
+  adicionaProduto =()=>{
+    const novoProduto = {
+      name: this.state.titulo,
+      description: this.state.descricao,
+      price: this.state.valor,
+      paymentMethod: this.state.pagamento,
+      shipping: this.state.entrega
+    }
+
+    axios.post(`${baseURL}/products`, novoProduto)
+    this.setState({
+          titulo:"",
+          descricao:"",
+          valor:"",
+          pagamento:"",
+          entrega:""
+    })
   }
 
   render(){
@@ -137,7 +156,7 @@ class FormularioContainer extends React.Component{
             <h4>Prazo de Entrega:</h4>
             <Input type="text" value={this.state.entrega} onChange={this.onChangeEntrega} placeholder = " Digite o Prazo de entrega"></Input>
           </ContainerLabels>
-          <Botao>Cadastrar Produto</Botao>
+          <Botao onClick={this.adicionaProduto}>Cadastrar Produto</Botao>
         </ContainerForm>
       </div>
     )
