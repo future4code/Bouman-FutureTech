@@ -72,7 +72,7 @@ class App extends React.Component{
     super(props);
 
     this.state = {
-        window: "Home"
+        window: "Loja"
     };
 };
 

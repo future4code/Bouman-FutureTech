@@ -3,16 +3,12 @@ import styled from 'styled-components';
 import { withStyles } from '@material-ui/core/styles';
 import CarrinhoContainer from '../CarrinhoContainer/CarrinhoContainer'
 
-import Filtros from '../Filtros/index'
-
-
 // Estilização
 
 const LojaContainer = styled.div `
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
-
 `
 
 const MainContainer = styled.div `
@@ -22,7 +18,9 @@ const MainContainer = styled.div `
 
 const ContainerDeProdutos = styled.div`
   width: 100%;
-  height: 100vh;
+  min-height: 110vh;
+  display: flex;
+  flex-wrap: wrap;
 `
 
 
@@ -41,7 +39,24 @@ class ProdutoContainer extends React.Component{
       <MainContainer>
         <Filtros/>
         <LojaContainer>
-          <ContainerDeProdutos/>
+          <ContainerDeProdutos>
+            <CardDeProduto/>
+            <CardDeProduto/>
+            <CardDeProduto/>
+            <CardDeProduto/>
+            <CardDeProduto/>
+            <CardDeProduto/>
+            <CardDeProduto/>
+            <CardDeProduto/>
+            <CardDeProduto/>
+            <CardDeProduto/>
+            <CardDeProduto/>
+            <CardDeProduto/>
+            <CardDeProduto/>
+            <CardDeProduto/>
+            <CardDeProduto/>
+            <CardDeProduto/>
+          </ContainerDeProdutos>
           <CarrinhoContainer/>
         </LojaContainer>
       </MainContainer>
