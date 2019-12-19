@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { withStyles } from '@material-ui/core/styles';
 import CarrinhoContainer from '../CarrinhoContainer/CarrinhoContainer'
-import Filtros from '../Filtros/index';
-import CardDeProduto from '../CardDeProduto/CardDeProduto';
 
 // Estilização
 
