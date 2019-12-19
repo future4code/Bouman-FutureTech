@@ -70,7 +70,7 @@ class Filtros extends React.Component{
                     <option>Valor da Venda</option>
                     <option>Prazo</option>
                 </Selecao>
-                <Span>Filrtar: </Span>
+                <Span>Filtar: </Span>
                 <Selecao>
                     <option></option>
                     <option>Valor máximo</option>

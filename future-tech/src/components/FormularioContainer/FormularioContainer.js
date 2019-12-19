@@ -33,12 +33,8 @@ const ContainerLabels = styled.div`
 const Input = styled.input`
   border:none;
   border-radius:5px;
-  width:50vw;
-  height: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 200px;
+  width:200px;
+  height: 18px;
 `
 
 const InputDescricao = styled.textarea`
@@ -46,10 +42,6 @@ const InputDescricao = styled.textarea`
   border-radius:5px;
   width:200px;
   height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 200px;
 `
 
 const Botao = styled.button`
@@ -63,7 +55,7 @@ const Botao = styled.button`
   justify-content: center;
   align-items: center;
   border: none;
-  font-weight: bolder;
+  font-weight: bold;
   outline: 0;
   :hover {
     cursor: pointer;
@@ -114,40 +106,39 @@ class FormularioContainer extends React.Component{
   render(){
 
     return(
-
       <div>
-          <Titulo>Cadastro de Produtos</Titulo>
-          <ContainerForm>
-            <ContainerLabels>
-              <h4>Título</h4>
-              <Input type="text" value={this.state.titulo} onChange={this.onChangeTitulo} placeholder = " Digite o Nome do produto"/>
-            </ContainerLabels>
+        <Titulo>Cadastro de Produtos</Titulo>
+        <ContainerForm>
+          <ContainerLabels>
+            <h4>Título Produto:</h4>
+            <Input type="text" value={this.state.titulo} onChange={this.onChangeTitulo}  placeholder = " Digite o Nome Produto"></Input>
+          </ContainerLabels>
 
-            <ContainerLabels>
-              <h4>Descrição Produto:</h4>
-              <InputDescricao type="textarea" value={this.state.descricao} onChange={this.onChangeDescricao} placeholder = " Descreva o produto"/>
-            </ContainerLabels>
-           
-            <ContainerLabels>
-              <h4>Valor Produto:</h4>
-              <Input type="number" value={this.state.valor} onChange={this.onChangeValor} placeholder = " Digite o produto"/>
-            </ContainerLabels>
+          <ContainerLabels>
+            <h4>Descrição Produto:</h4>
+            <InputDescricao type="textarea" value={this.state.descricao} onChange={this.onChangeDescricao} placeholder = " Descreva o Produto"></InputDescricao>
+          </ContainerLabels>
+          
+          <ContainerLabels>
+            <h4>Valor Produto:</h4>
+            <Input type="number" value={this.state.valor} onChange={this.onChangeValor} placeholder = " Digite o Valor Produto"></Input>
+          </ContainerLabels>
 
-            <ContainerLabels>
-              <h4>Método de Pagamento:</h4>
-              <select>
-                <option>Método de Pagamento</option>
-                <option>Cartão</option>
-                <option>Boleto</option>
-              </select>
-            </ContainerLabels>
+          <ContainerLabels>
+            <h4>Método de Pagamento:</h4>
+            <select value={this.state.pagamento} onChange={this.onChangePagamento}>
+              <option>Escolha o Método</option>
+              <option>Cartão</option>
+              <option>Boleto</option>
+            </select>
+          </ContainerLabels>
             
-            <ContainerLabels>
-              <h4>Prazo de Entrega:</h4>
-              <Input type="text" value={this.state.entrega} onChange={this.onChangeEntrega} placeholder = " Digite o prazo de entrega"/>
-            </ContainerLabels>
-            <Botao>Cadastrar Produto</Botao>  
-          </ContainerForm>
+          <ContainerLabels>
+            <h4>Prazo de Entrega:</h4>
+            <Input type="text" value={this.state.entrega} onChange={this.onChangeEntrega} placeholder = " Digite o Prazo de entrega"></Input>
+          </ContainerLabels>
+          <Botao>Cadastrar Produto</Botao>
+        </ContainerForm>
       </div>
     )
   }
