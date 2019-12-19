@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { withStyles } from '@material-ui/core/styles';
 import CarrinhoContainer from '../CarrinhoContainer/CarrinhoContainer'
+import Filtros from '../Filtros/index'
 
 // Estilização
 
@@ -31,9 +32,11 @@ class ProdutoContainer extends React.Component{
   render(){
     return(
       <MainContainer>
+        
         <ContainerDeProdutos>
-
+        <Filtros></Filtros>
         </ContainerDeProdutos>
+        
         <CarrinhoContainer/>
       </MainContainer>
     )

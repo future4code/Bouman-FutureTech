@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { withStyles } from '@material-ui/core/styles';
 
+
 const MenuCarrinho = styled.div`
   display: flex;
   flex-direction: column;
@@ -70,6 +71,7 @@ class LojaCarrinho extends React.Component {
   render() {
     return (
       <div>
+        
         <BotaoCarrinho onClick={this.aoClicarNoCarrinho}>
           <ImgCarrinho
             src="https://icons-for-free.com/iconfiles/png/512/cart-131964784999299812.png"
