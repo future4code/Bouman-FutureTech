@@ -2,14 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import { withStyles } from '@material-ui/core/styles';
 import CarrinhoContainer from '../CarrinhoContainer/CarrinhoContainer'
+import Filtros from '../Filtros/index';
 
 // Estilização
 
-const MainContainer = styled.div `
+const LojaContainer = styled.div `
   width: 100%;
   height: 100%;
   display: flex;
 
+`
+
+const MainContainer = styled.div `
+  width: 100%;
+  height: 100%;
 `
 
 const ContainerDeProdutos = styled.div`
@@ -31,10 +37,11 @@ class ProdutoContainer extends React.Component{
   render(){
     return(
       <MainContainer>
-        <ContainerDeProdutos>
-
-        </ContainerDeProdutos>
-        <CarrinhoContainer/>
+        <Filtros/>
+        <LojaContainer>
+          <ContainerDeProdutos/>
+          <CarrinhoContainer/>
+        </LojaContainer>
       </MainContainer>
     )
   }

@@ -54,7 +54,7 @@ function HomePage () {
         <MainContainer>
             <ImageBackground>
                 <DescriptionBackground>
-                    <Titulo>FUTURE TECH </Titulo>
+                    <Titulo>FUTURE TECH</Titulo>
                     <P1>
                         Bem vindo a future Tech!
                     </P1>
