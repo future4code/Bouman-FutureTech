@@ -38,12 +38,13 @@ const ButtonsContainer = styled.div`
 
 const ButtonLoja = styled.button `
     height: 50px;
-    width: 100px;
+    width: 20vw;
     background-color: #C76103;
     color: white;
     outline: 0;
     border: 0;
     border-radius: 4px;
+    max-width: 100px;
     :hover{
         cursor: pointer;
         background-color: #C75103;
@@ -52,12 +53,13 @@ const ButtonLoja = styled.button `
 
 const ButtonFormulario = styled.button `
     height: 50px;
-    width: 100px;
+    width: 20vw;
     background-color: #C76103;
     color: white;
     outline: 0;
     border: 0;
     border-radius: 4px;
+    max-width: 100px;
     :hover{
         cursor: pointer;
         background-color: #C75103;

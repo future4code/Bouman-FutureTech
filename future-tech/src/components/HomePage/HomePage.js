@@ -4,12 +4,13 @@ import { withStyles } from '@material-ui/core/styles';
 import Background from '../img/Background.jpg'
 
 const MainContainer = styled.div `
-    height: 600px;
+    height: 30em;
     width: 100%;
     background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
+    max-height: 600px;
 `
 
 const ImageBackground = styled.div `
@@ -24,7 +25,7 @@ const ImageBackground = styled.div `
     align-items:center;
 `
 const DescriptionBackground = styled.div `
-    width: 400px;
+    width: 60vw;
     height: 100%;
     opacity: initial;
     color: white;
@@ -32,6 +33,8 @@ const DescriptionBackground = styled.div `
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 400px;
+    min-width: 330px;
 `
 
 const Titulo = styled.h1 `
@@ -43,7 +46,7 @@ const P1 = styled.p `
     font-size: 28px;
 `
 const P2= styled.p `
-    font-size: 20px;
+    font-size: 1rem;
 `
 
 function HomePage () {
