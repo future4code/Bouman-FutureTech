@@ -7,7 +7,6 @@ import LogoMarca from './components/img/LogoMarca.png';
 import ProdutoContainer from './components/ProdutosContainer/ProdutoContainer';
 import FormularioContainer from './components/FormularioContainer/FormularioContainer';
 
-
 // Estilização
 
 const Header = styled.div `
@@ -73,7 +72,7 @@ class App extends React.Component{
     super(props);
 
     this.state = {
-        window: "Loja"
+        window: "Home"
     };
 };
 
