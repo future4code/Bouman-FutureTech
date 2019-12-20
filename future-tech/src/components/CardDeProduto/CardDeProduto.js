@@ -114,18 +114,19 @@ class CardDeProduto extends React.Component {
     }
 
     render () {
+        console.log(this.props.produto)
         return (
             <CardDeProdutosContainer> 
                 <Img src = {"https://images.tcdn.com.br/img/img_prod/15959/computador_office_standard_pentium_g5400_8a_geracao_8gb_memoria_hd_500gb_hdmi_gabinete_atx_monitor_1_15061_1_20190206161629.jpg"}/>
                 <Hr/>
-                <NomeProduto>Computador</NomeProduto>
+                <NomeProduto>{this.props.produto.name}</NomeProduto>
                 <DescricaoContainer>
                     <Span>Descrição: </Span>
-                    <Span>asdsadasdsaasafsafsafsa</Span>
+                    <Span>{this.props.produto.description}</Span>
                 </DescricaoContainer>
                 <ValorContainer>
                     <Span>Valor:</Span>
-                    <Span>R$1000,00</Span> 
+                    <Span>{this.props.produto.price}</Span> 
                 </ValorContainer>
                 <PagamentoContainer>
                     <Span>Método de Pagamento:</Span>
@@ -136,7 +137,7 @@ class CardDeProduto extends React.Component {
                 </PagamentoContainer>
                 <PrazoContainer>
                     <Span>Prazo de Entrega:</Span>
-                    <Span>10 dias úteis</Span>
+                    <Span>{this.props.produto.shipping}</Span>
                 </PrazoContainer>
                 <ButtonContainer>
                     <Button>Adicionar ao Carrinho</Button>
