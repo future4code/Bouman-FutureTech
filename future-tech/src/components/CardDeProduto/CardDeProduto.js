@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { withStyles } from '@material-ui/core/styles';
+import CarrinhoContainer from '../CarrinhoContainer/CarrinhoContainer'
 
 // Estilização
 
@@ -110,12 +111,24 @@ class CardDeProduto extends React.Component {
         super (props);
 
         this.state = {
-
+            arrayItemCarrinho: [],
         }
     }
 
+    adcProdutoCarrinho =()=>{
+        const produtoCarrinho ={
+            id: this.props.produto.id,
+            nome: this.props.produto.name,
+            preco: this.props.produto.price,
+        }
+        const copiaArrayItemCarrinho = [...this.state.arrayItemCarrinho];
+        copiaArrayItemCarrinho.push(produtoCarrinho)
+        this.setState({arrayItemCarrinho: copiaArrayItemCarrinho})
+    }
+
+
     render () {
-        console.log(this.props.produto)
+        console.log("sei la",this.state.produtoCarrinho)
         return (
             <CardDeProdutosContainer> 
                 <NomeProduto>{this.props.produto.name}</NomeProduto>
@@ -139,8 +152,13 @@ class CardDeProduto extends React.Component {
                     <Span>{this.props.produto.shipping}</Span>
                 </PrazoContainer>
                 <ButtonContainer>
-                    <Button>Adicionar ao Carrinho</Button>
+                    <Button onClick={this.adcProdutoCarrinho}>Adicionar ao Carrinho</Button>
                 </ButtonContainer>
+
+                    
+                        <CarrinhoContainer produto={this.state.arrayItemCarrinho}/>
+                   
+                
             </CardDeProdutosContainer>
         )
     }

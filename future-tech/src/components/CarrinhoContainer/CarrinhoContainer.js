@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { withStyles } from '@material-ui/core/styles';
+import ItemCarrinho from '../ItemCarrinho/ItemCarrinho'
 
 
 const MenuCarrinho = styled.div`
@@ -61,6 +62,7 @@ class LojaCarrinho extends React.Component {
     super(props);
     this.state = {
       mostraMenu: false,
+      arrayItensCarrinho:[],
     };
   }
 
@@ -68,7 +70,14 @@ class LojaCarrinho extends React.Component {
     this.setState({ mostraMenu: !this.state.mostraMenu });
   };
 
+  
+
+ 
+
   render() {
+   
+     console.log("carrinho ",this.props.produto)
+    
     return (
       <div>
         
@@ -82,7 +91,14 @@ class LojaCarrinho extends React.Component {
           <MenuCarrinho>
             <h2>Carrinho:</h2>
             <ListaProduto>
-              <p>batata</p>
+           
+            {(this.props.produto || []).map(item =>(
+               <ItemCarrinho item={item} />
+             ))}
+
+              
+              <ItemCarrinho></ItemCarrinho>
+
             </ListaProduto>
             <Hr/>
             <p>

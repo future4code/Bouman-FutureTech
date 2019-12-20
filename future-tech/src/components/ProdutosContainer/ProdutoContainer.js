@@ -37,6 +37,7 @@ class ProdutoContainer extends React.Component{
     
     this.state = {
       arrayProdutos: [],
+      arrayItemCarrinho: []
     }
   }
 
@@ -58,6 +59,9 @@ class ProdutoContainer extends React.Component{
     
   }
 
+ 
+
+
   
   render(){
     
@@ -67,7 +71,7 @@ class ProdutoContainer extends React.Component{
         <LojaContainer>
           <ContainerDeProdutos>
             {this.state.arrayProdutos.map(produto =>(
-              <CardDeProduto produto={produto}/>
+              <CardDeProduto  produto={produto}/>
             ))}
           </ContainerDeProdutos>
           <CarrinhoContainer/>
