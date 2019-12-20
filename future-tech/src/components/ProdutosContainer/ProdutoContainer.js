@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { withStyles } from '@material-ui/core/styles';
 import CarrinhoContainer from '../CarrinhoContainer/CarrinhoContainer'
+import CardDeProduto from '../CardDeProduto/CardDeProduto';
+import Filtros from '../Filtros';
 
 // Estilização
 
@@ -30,7 +32,7 @@ class ProdutoContainer extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-
+      
     }
   }
 

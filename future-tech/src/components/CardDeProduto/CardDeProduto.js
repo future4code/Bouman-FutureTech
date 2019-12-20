@@ -19,7 +19,7 @@ const CardDeProdutosContainer = styled.div `
 `
 
 const DescricaoContainer = styled.div `
-    width: 100%;
+    min-width: 100%;
     min-height: 40px;
     padding: 0;
     display: flex;
@@ -121,7 +121,7 @@ class CardDeProduto extends React.Component {
                 <NomeProduto>Computador</NomeProduto>
                 <DescricaoContainer>
                     <Span>Descrição: </Span>
-                    <Span>asdsadasdsaasdsadsadasdasdsadasafsafsafsa</Span>
+                    <Span>asdsadasdsaasafsafsafsa</Span>
                 </DescricaoContainer>
                 <ValorContainer>
                     <Span>Valor:</Span>

@@ -71,21 +71,17 @@ class FormularioContainer extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-
           titulo:"",
           descricao:"",
           valor:"",
           pagamento:"",
           entrega:""
-
     }
   }
 
   onChangeTitulo = (e) =>{
     this.setState({titulo: e.target.value})
   }
-
- 
 
   onChangeDescricao =(e) =>{
     this.setState({descricao: e.target.value})
@@ -123,7 +119,6 @@ class FormularioContainer extends React.Component{
   }
 
   render(){
-
     return(
       <div>
         <Titulo>Cadastro de Produtos</Titulo>
@@ -161,8 +156,6 @@ class FormularioContainer extends React.Component{
       </div>
     )
   }
-
-
 }
 
 export default FormularioContainer;
