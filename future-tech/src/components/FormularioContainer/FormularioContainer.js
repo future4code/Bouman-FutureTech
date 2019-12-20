@@ -10,7 +10,7 @@ const Titulo = styled.h1`
 
 const ContainerForm = styled.div `
   width: 95vw;
-  height: 60vh;
+  min-height: 70vh;
   max-width: 500px;
   max-height: 540px;
   border-radius:10px;
@@ -61,7 +61,7 @@ const Botao = styled.button`
   :hover {
     cursor: pointer;
     color: white;
-    background-color: gray;
+    background-color: black;
   }
 `
 
@@ -72,6 +72,7 @@ class FormularioContainer extends React.Component{
     super(props)
     this.state = {
           titulo:"",
+          imagem:"",
           descricao:"",
           valor:"",
           pagamento:"",
@@ -81,6 +82,10 @@ class FormularioContainer extends React.Component{
 
   onChangeTitulo = (e) =>{
     this.setState({titulo: e.target.value})
+  }
+
+  onChangeImagem = (e) =>{
+    this.setState({imagem: e.target.value})
   }
 
   onChangeDescricao =(e) =>{
@@ -126,6 +131,11 @@ class FormularioContainer extends React.Component{
           <ContainerLabels>
             <h4>Título Produto:</h4>
             <Input type="text" value={this.state.titulo} onChange={this.onChangeTitulo}  placeholder = " Digite o Nome Produto"></Input>
+          </ContainerLabels>
+
+          <ContainerLabels>
+            <h4>Imagem do Produto:</h4>
+            <Input type="text" value={this.state.imagem} onChange={this.onChangeImagem}  placeholder = " URL Imagem do Produto"></Input>
           </ContainerLabels>
 
           <ContainerLabels>
