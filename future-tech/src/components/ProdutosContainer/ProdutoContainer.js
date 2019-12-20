@@ -4,6 +4,9 @@ import { withStyles } from '@material-ui/core/styles';
 import CarrinhoContainer from '../CarrinhoContainer/CarrinhoContainer'
 import CardDeProduto from '../CardDeProduto/CardDeProduto';
 import Filtros from '../Filtros';
+import axios from 'axios';
+
+const baseURL = "https://us-central1-future-apis.cloudfunctions.net/futureTech/products";
 
 // Estilização
 
@@ -31,33 +34,41 @@ const ContainerDeProdutos = styled.div`
 class ProdutoContainer extends React.Component{
   constructor(props){
     super(props)
+    
     this.state = {
-      
+      arrayProdutos: [],
     }
   }
 
+
+
+  componentDidMount(){
+    this.pegarProduto();
+  }
+
+  pegarProduto = () =>{
+    const request = axios.get(
+      `${baseURL}`
+    )
+
+    request.then(response =>{
+      this.setState({arrayProdutos: response.data.products})
+    })
+
+    
+  }
+
+  
   render(){
+    
     return(
       <MainContainer>
         <Filtros/>
         <LojaContainer>
           <ContainerDeProdutos>
-            <CardDeProduto/>
-            <CardDeProduto/>
-            <CardDeProduto/>
-            <CardDeProduto/>
-            <CardDeProduto/>
-            <CardDeProduto/>
-            <CardDeProduto/>
-            <CardDeProduto/>
-            <CardDeProduto/>
-            <CardDeProduto/>
-            <CardDeProduto/>
-            <CardDeProduto/>
-            <CardDeProduto/>
-            <CardDeProduto/>
-            <CardDeProduto/>
-            <CardDeProduto/>
+            {this.state.arrayProdutos.map(produto =>(
+              <CardDeProduto produto={produto}/>
+            ))}
           </ContainerDeProdutos>
           <CarrinhoContainer/>
         </LojaContainer>
