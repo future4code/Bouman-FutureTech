@@ -6,7 +6,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 const CardDeProdutosContainer = styled.div `
     width: 20vw;
-    height: 55vh;
+    height: 45vh;
     max-width: 400px;
     background-color: white;
     border: 1px solid black;
@@ -44,6 +44,7 @@ const Hr = styled.hr `
 
 const NomeProduto = styled.h3 `
     margin: 0;
+    margin-top:5px;
     padding: 0;
     margin-bottom: 5px;
 `
@@ -90,7 +91,7 @@ const ButtonContainer = styled.div `
 
 const Button = styled.button `
     width: 70%;
-    height: 70%;
+    height: 30%;
     background-color: #C76103;
     color: white;
     outline: 0;
@@ -117,8 +118,6 @@ class CardDeProduto extends React.Component {
         console.log(this.props.produto)
         return (
             <CardDeProdutosContainer> 
-                <Img src = {"https://images.tcdn.com.br/img/img_prod/15959/computador_office_standard_pentium_g5400_8a_geracao_8gb_memoria_hd_500gb_hdmi_gabinete_atx_monitor_1_15061_1_20190206161629.jpg"}/>
-                <Hr/>
                 <NomeProduto>{this.props.produto.name}</NomeProduto>
                 <DescricaoContainer>
                     <Span>Descrição: </Span>
